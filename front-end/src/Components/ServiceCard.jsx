@@ -11,7 +11,7 @@ const ServiceCard = ({ iconSrc, title }) => {
       </p>
 
       <p className="text-subtitle-gray text-center">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, eos!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, eos!s dasd
       </p>
     </div>
   );

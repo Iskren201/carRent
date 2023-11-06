@@ -8,6 +8,7 @@ import { IoClose } from "react-icons/io5";
 
 import { Drawer } from "@material-tailwind/react";
 
+import listBar from './routes';
 
 
 const Navigation = () => {
@@ -23,40 +24,7 @@ const Navigation = () => {
         setOpen(false);
     };
 
-    const listBar = [
 
-        {
-            id: 'Home',
-            link: '/',
-            styleClass: 'link border-primary-green',
-        },
-        {
-            id: 'Booking',
-            link: '/Booking',
-            styleClass: 'link',
-        },
-        {
-            id: 'About',
-            link: '/About',
-            styleClass: 'link',
-        },
-        {
-            id: 'Cars',
-            link: '/CarsForRental',
-            styleClass: 'link',
-        },
-        {
-            id: 'Services',
-            link: '/Services',
-            styleClass: 'link',
-        },
-        {
-            id: 'Contact',
-            link: '/Contact',
-            styleClass: 'link',
-        },
-
-    ]
 
     return (
         <div>
@@ -112,13 +80,13 @@ const Navigation = () => {
 
                     <div className="flex flex-col gap-10">
                         <button className="btn_base text-primary-black hover:text-primary-green">
-                            Login
+                            <Link to='./Login'>Logins</Link>
                         </button>
                         <button
                             className="btn_base text-primary-black border-2 border-primary-green
             rounded-full py-2 px-5 hover:bg-primary-green hover:border-transparent hover:text-white"
                         >
-                            Sign Up
+                            <Link to='./SignUp'>Sign Up</Link>
                         </button>
                     </div>
 
@@ -130,13 +98,13 @@ const Navigation = () => {
 
                 <div className="hidden lg:flex items-center gap-[30px]">
                     <button className="btn_base text-primary-black hover:text-primary-green">
-                        Login
+                        <Link to='./Login'>Logins</Link>
                     </button>
                     <button
                         className="btn_base text-primary-black border-2 border-primary-green
             rounded-full py-2 px-5 hover:bg-primary-green hover:border-transparent hover:text-white"
                     >
-                        Sign Up
+                        <Link to='./SignUp'>Sign Up</Link>
                     </button>
                 </div>
             </div>

@@ -5,9 +5,13 @@ import instagramIcon from "../assets/instagram-icon.svg";
 import linkedinIcon from "../assets/linkedin-icon.svg";
 import youtubeIcon from "../assets/facebook-icon.svg";
 
+import listBar from "../components/routes";
+
+import { Link } from "react-router-dom";
+
 const Footer = () => {
   return (
-    <div className="py-36">
+    <div className="py-36 footer-container">
       <div
         className="wrapper flex flex-col lg:flex-row justify-start
        lg:justify-between gap-12"
@@ -28,12 +32,16 @@ const Footer = () => {
         </div>
 
         <ul className="flex flex-col sm:flex-row items-center gap-10 mx-auto lg:mx-0">
-          <li className="link border-primary-green">Home</li>
-          <li className="link border-transparent">Booking</li>
-          <li className="link border-transparent">About</li>
-          <li className="link border-transparent">Cars</li>
-          <li className="link border-transparent">Services</li>
-          <li className="link border-transparent">Contact</li>
+          {listBar.map(({ id, link, styleClass }) => (
+            <li
+              key={id}
+              className={styleClass}
+            >
+              <Link to={link}>
+                {id}
+              </Link>
+            </li>
+          ))}
         </ul>
       </div>
     </div>

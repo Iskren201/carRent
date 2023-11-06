@@ -1,8 +1,8 @@
+import { Link } from "react-router-dom";
 import carOne from "../assets/car-one.svg";
 import carTwo from "../assets/car-two.svg";
 import carThree from "../assets/car-three.svg";
-import { CarCard } from "../components";
-import { Link } from "react-router-dom";
+import CarCard from "../components/CarCard";
 
 const CarsForRental = () => {
   const carList = [
@@ -18,90 +18,25 @@ const CarsForRental = () => {
       },
     },
     {
-      carName: "BMW M2",
+      carName: "BMW м3",
       imageSrc: carTwo,
       details: {
         type: "Sports",
         category: "Auto",
         seats: "4 Seats",
-        fuelType: "Diesel",
-        price: 369,
+        fuelType: "gasoline",
+        price: 269,
       },
     },
     {
-      carName: "Ford Explorer",
+      carName: "Toyota",
       imageSrc: carThree,
       details: {
-        type: "Sports",
-        category: "Auto",
-        seats: "4 Seats",
-        fuelType: "Diesel",
-        price: 369,
-      },
-    }, {
-      carName: "GTR Miisan",
-      imageSrc: carThree,
-      details: {
-        type: "Sports",
-        category: "Nissan",
-        seats: "2 Seats",
-        fuelType: "Benzin",
-        price: 369,
-      },
-    },
-    {
-      carName: "GTR Miisan",
-      imageSrc: carThree,
-      details: {
-        type: "Sports",
-        category: "Nissan",
-        seats: "2 Seats",
-        fuelType: "Benzin",
-        price: 369,
-      },
-    },
-    {
-      carName: "GTR Miisan",
-      imageSrc: carThree,
-      details: {
-        type: "Sports",
-        category: "Nissan",
-        seats: "2 Seats",
-        fuelType: "Benzin",
-        price: 369,
-      },
-    },
-    {
-      carName: "GTR Miisan",
-      imageSrc: carThree,
-      details: {
-        type: "Sports",
-        category: "Nissan",
-        seats: "2 Seats",
-        fuelType: "Benzin",
-        price: 369,
-      },
-    },
-    {
-      carName: "GTR Miisan",
-      imageSrc: carThree,
-      details: {
-        type: "Sports",
-        category: "Nissan",
-        seats: "2 Seats",
-        fuelType: "Benzin",
-        price: 369,
-      },
-    },
-    {
-      carName: "GTR Miisan",
-      imageSrc: carThree,
-      details: {
-        type: "Sports",
-        category: "Nissan",
-        seats: "2 Seats",
-        fuelType: "Benzin",
-        price: 369,
+        type: "Family",
+        category: "SUV",
+        seats: "7 Seats",
+        fuelType: "gasoline",
+        price: 569,
       },
     },
   ];
@@ -115,7 +50,7 @@ const CarsForRental = () => {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 justify-center">
           {carList.map((car, index) => (
-            <CarCard key={index} carName={car.carName} imageSrc={car.imageSrc} />
+            <CarCard key={index} carName={car.carName} imageSrc={car.imageSrc} details={car.details} />
           ))}
         </div>
         <Link to="/" className="block text-center mt-8 text-indigo-600 hover:text-indigo-700">
