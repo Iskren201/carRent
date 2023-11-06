@@ -22,6 +22,7 @@ const Services = () => {
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
             suscipit voluptate at fugit quisquam nulla beatae necessitatibus
             veniam sit id?
+            Services
           </p>
         </div>
       </div>

@@ -1,6 +1,5 @@
 import contactPattern from "../assets/contact-pattern.svg";
 
-import { PrimaryButton } from "../components";
 
 const Contact = () => {
   return (
@@ -22,9 +21,7 @@ const Contact = () => {
             consequuntur explicabo.
           </p>
 
-          <PrimaryButton className="mx-auto lg:mx-0 w-full sm:w-fit">
-            Contact us
-          </PrimaryButton>
+
         </div>
       </div>
 

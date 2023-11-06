@@ -1,6 +1,5 @@
 import carImg from "../assets/pricing-card-car.svg";
 
-import PrimaryButton from "./PrimaryButton";
 
 const essentialPlanOptions = [
   "Quisque rhoncus",
@@ -37,8 +36,8 @@ const PricingCard = ({ special, headText, plan }) => {
     plan === "recommended"
       ? recommendedPlanOptions
       : plan === "pro"
-      ? proPlanOptions
-      : essentialPlanOptions;
+        ? proPlanOptions
+        : essentialPlanOptions;
 
   return (
     <div
@@ -52,11 +51,10 @@ const PricingCard = ({ special, headText, plan }) => {
       ) : (
         <div className="mb-[30px]">
           <p
-            className={`${
-              plan === "recommended"
+            className={`${plan === "recommended"
                 ? "text-primary-green"
                 : "text-primary-black"
-            } font-bold uppercase text-center mb-[6px]`}
+              } font-bold uppercase text-center mb-[6px]`}
           >
             {plan}
           </p>
@@ -79,13 +77,7 @@ const PricingCard = ({ special, headText, plan }) => {
         </div>
       )}
 
-      {plan ? (
-        <PrimaryButton black={plan !== "recommended"} className="mt-auto">
-          Choose plan
-        </PrimaryButton>
-      ) : (
-        <img src={carImg} alt="car" className="absolute right-0 bottom-12" />
-      )}
+
     </div>
   );
 };
